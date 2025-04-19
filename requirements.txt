@@ -1,0 +1,21 @@
+fastapi
+uvicorn
+boto3
+PyPDF2
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-ollama
+langchain  # keep this if you're using high-level wrappers
+sentence-transformers
+langgraph
+pydantic
+requests
+chromadb
+numpy<2
+python-multipart
+psutil
+python-dotenv
+
+
+
