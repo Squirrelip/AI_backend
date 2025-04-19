@@ -5,8 +5,8 @@ import psutil
 import time
 from concurrent.futures import ThreadPoolExecutor
 
-API_URL = "http://127.0.0.1:8000/generate_small"
-# BUCKET_NAME = "sqipstoreage"  # <-- replace with actual bucket
+API_URL = "http://127.0.0.1:8000/generate"
+BUCKET_NAME = "sqipstoreage"  # <-- replace with actual bucket
 OBJECT_KEY = "patents/test_patent.pdf"  # <-- S3 path to the file
 NUM_REQUESTS = 1  # Simulate 1+ concurrent users
 
@@ -38,7 +38,7 @@ def send_request(i):
         data = {
             "bucket_name": BUCKET_NAME,
             "object_key": OBJECT_KEY,
-            "document_type": "elevator pitch",
+            "document_type": "target firms",
             "user_query": "What is this document about?",
             "additional_info": "I want to know more about the applications of this patent."
         }
